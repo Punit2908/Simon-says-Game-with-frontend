@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(120deg, #eae2f8 0%, #d0e6a5 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  margin-top: 50px;
+  font-size: 2.5em;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.4em;
+  color: #555;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 28px;
+  margin: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+  cursor: pointer;
+  transition: transform 0.16s, box-shadow 0.18s;
+  outline: none;
+  position: relative;
+  font-size: 1.1em;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+}
+
+.red {
+  background: radial-gradient(circle at 50% 60%, #ff7171 80%, #ed213a 100%);
+}
+
+.green {
+  background: radial-gradient(circle at 50% 60%, #90ff90 80%, #43e97b 100%);
+}
+
+.blue {
+  background: radial-gradient(circle at 50% 60%, #7ec0ee 80%, #0575e6 100%);
+}
+
+.yellow {
+  background: radial-gradient(circle at 50% 60%, #fff59d 70%, #f9d423 100%);
+}
+
+/* Flash animation for button feedback */
+.flash {
+  box-shadow: 0 0 30px 10px #fff;
+  background: #fff !important;
+  transition: background 0.12s;
+  z-index: 1;
+}
+
+/* Lose animation */
+/* ... other styles ... */
+
+/* Lose animation */
+body.lose {
+  animation: loseFlash 0.5s;
+}
+
+@keyframes loseFlash {
+  0%, 80% {
+    background: red;
+  }
+  100% {
+    background: linear-gradient(120deg, #eae2f8 0%, #d0e6a5 100%); /* Original background */
+  }
+}
