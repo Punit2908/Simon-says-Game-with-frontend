@@ -15,13 +15,12 @@ document.addEventListener("keypress",function (){
     }
     
 });
-document.addEventListener("click",function (){
-    if(start === false){
+document.addEventListener("click", function(event) {
+    // Check if the game hasn't started AND the click was NOT on a game button
+    if (start === false && !event.target.classList.contains('btn')) {
         start = true;
-
         levelUp();
     }
-    
 });
 
 function btnFlash(btn){
